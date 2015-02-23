@@ -1,0 +1,14 @@
+PODS:
+  - TPLAnimatableIcons (0.0.1)
+
+DEPENDENCIES:
+  - TPLAnimatableIcons (from `../../`)
+
+EXTERNAL SOURCES:
+  TPLAnimatableIcons:
+    :path: ../../
+
+SPEC CHECKSUMS:
+  TPLAnimatableIcons: 063c7615276b551ee41d294b0c47413874cc835d
+
+COCOAPODS: 0.35.0
