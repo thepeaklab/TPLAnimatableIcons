@@ -13,7 +13,7 @@
 
 @property (nonatomic) TPLAnimatableIconType iconType;
 @property (nonatomic) TPLAnimatableIconState iconState;
-@property (nonatomic) CGFloat strokeWidth;
+@property (nonatomic) CGFloat lineWidth;
 
 - (void)animateToState:(TPLAnimatableIconState)state;
 

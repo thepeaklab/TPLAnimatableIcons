@@ -29,10 +29,11 @@
                                 </connections>
                             </stepper>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zmo-gv-DRg">
-                                <rect key="frame" x="53" y="320" width="313" height="29"/>
+                                <rect key="frame" x="53" y="320" width="315" height="29"/>
                                 <segments>
-                                    <segment title="Hamburger - Cross"/>
-                                    <segment title="Hamburger - Arrow Left"/>
+                                    <segment title="H - C"/>
+                                    <segment title="H - A(left)"/>
+                                    <segment title="H - A(top-r)"/>
                                 </segments>
                                 <connections>
                                     <action selector="actionIconTypeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="aaM-7x-Yyd"/>
@@ -46,7 +47,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="animateableView" destination="bdo-1S-lrI" id="9eS-jd-24q"/>
+                        <outlet property="animatableView1" destination="bdo-1S-lrI" id="TYC-iN-F3e"/>
                         <outlet property="stepperStrokeWidth" destination="apN-gH-lD0" id="xbF-MI-qAp"/>
                         <outlet property="switchState" destination="Hfh-KA-ihv" id="4JX-jy-Ys9"/>
                     </connections>
