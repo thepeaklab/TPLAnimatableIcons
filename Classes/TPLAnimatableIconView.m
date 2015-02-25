@@ -16,7 +16,7 @@
 }
 
 @property (strong, nonatomic) NSDictionary *iconTypeSettings;
-@property (strong, nonatomic) NSArray *strokes;
+@property (strong, nonatomic) NSArray *lines;
 
 @end
 
@@ -58,7 +58,7 @@
 	
 	self.iconTypeSettings = @{
 							  @(TPLAnimatableIconTypeHamburgerToCross): @{
-									  @"numberOfStrokes": @(3),
+									  @"numberOfLines": @(3),
 									  @"aspectRatio": @{
 											  @(TPLAnimatableIconState1): @(0.6),
 											  @(TPLAnimatableIconState2): @(1)
@@ -73,13 +73,51 @@
 									  },
 									  @"lines": @[
 											  @{
-												  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionTopLeft),
-												  @(TPLAnimatableIconState2)
+												  @"from": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionTopLeft),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionBottomLeft)
+												  },
+												  @"to": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionTopRight),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionTopRight)
+												  },
+												  @"opacity": @{
+														  @(TPLAnimatableIconState1): @(1),
+														  @(TPLAnimatableIconState2): @(1)
+												  }
+											   },
+											  @{
+												  @"from": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionMiddleLeft),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionMiddleLeft)
+												  },
+												  @"to": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionMiddleRight),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionMiddleRight)
+												  },
+												  @"opacity": @{
+														  @(TPLAnimatableIconState1): @(1),
+														  @(TPLAnimatableIconState2): @(0)
+												  }
+											   },
+											  @{
+												  @"from": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionBottomLeft),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionTopLeft)
+												  },
+												  @"to": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionBottomRight),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionBottomRight)
+												  },
+												  @"opacity": @{
+														  @(TPLAnimatableIconState1): @(1),
+														  @(TPLAnimatableIconState2): @(1)
+												  }
 											   }
 									  ]
 							  },
 							  @(TPLAnimatableIconTypeHamburgerToArrowLeft): @{
-									  @"numberOfStrokes": @(3),
+									  @"numberOfLines": @(3),
 									  @"aspectRatio": @{
 											  @(TPLAnimatableIconState1): @(0.6),
 											  @(TPLAnimatableIconState2): @(0.8)
@@ -91,10 +129,54 @@
 									  @"rotation": @{
 											  @(TPLAnimatableIconState1): @(0),
 											  @(TPLAnimatableIconState2): @(0)
-									  }
+									  },
+									  @"lines": @[
+											  @{
+												  @"from": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionTopLeft),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionMiddleLeft)
+												  },
+												  @"to": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionTopRight),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionTopCenter)
+												  },
+												  @"opacity": @{
+														  @(TPLAnimatableIconState1): @(1),
+														  @(TPLAnimatableIconState2): @(1)
+												  }
+											   },
+											  @{
+												  @"from": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionMiddleLeft),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionMiddleLeft)
+												  },
+												  @"to": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionMiddleRight),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionMiddleRight)
+												  },
+												  @"opacity": @{
+														  @(TPLAnimatableIconState1): @(1),
+														  @(TPLAnimatableIconState2): @(1)
+												  }
+											   },
+											  @{
+												  @"from": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionBottomLeft),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionMiddleLeft)
+												  },
+												  @"to": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionBottomRight),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionBottomCenter)
+												  },
+												  @"opacity": @{
+														  @(TPLAnimatableIconState1): @(1),
+														  @(TPLAnimatableIconState2): @(1)
+												  }
+											   }
+									  ]
 							  },
 							  @(TPLAnimatableIconTypeHamburgerToArrowTopRotation): @{
-									  @"numberOfStrokes": @(3),
+									  @"numberOfLines": @(3),
 									  @"aspectRatio": @{
 											  @(TPLAnimatableIconState1): @(0.6),
 											  @(TPLAnimatableIconState2): @(1)
@@ -106,6 +188,9 @@
 									  @"rotation": @{
 											  @(TPLAnimatableIconState1): @(0),
 											  @(TPLAnimatableIconState2): @(90)
+									  },
+									  @"lines": @{
+											  @"copyLinesFromIconType": @(TPLAnimatableIconTypeHamburgerToArrowLeft)
 									  }
 							  }
 	};
@@ -156,6 +241,17 @@
 		  updateIconType:NO];
 }
 
+- (void)animateToIconType:(TPLAnimatableIconType)iconType
+{
+	NSUInteger newNumberOfStrokes = [self numberOfLinesForIconType:iconType];
+	BOOL canAnimate = self.lines.count == newNumberOfStrokes;
+	_iconType = iconType;
+#warning reset state after icon type change ?!
+	[self animateToState:self.iconState
+				animated:canAnimate
+		  updateIconType:self.iconType];
+}
+
 #pragma mark - Settings
 
 - (NSDictionary *)settingsForIconType:(TPLAnimatableIconType)iconType
@@ -163,9 +259,9 @@
 	return self.iconTypeSettings[@(iconType)];
 }
 
-- (NSInteger)numberOfStrokesForIconType:(TPLAnimatableIconType)iconType
+- (NSInteger)numberOfLinesForIconType:(TPLAnimatableIconType)iconType
 {
-	return [[self settingsForIconType:iconType][@"numberOfStrokes"] integerValue];
+	return [[self settingsForIconType:iconType][@"numberOfLines"] integerValue];
 }
 
 - (CGFloat)aspectRationForIconType:(TPLAnimatableIconType)iconType
@@ -186,6 +282,51 @@
 	return [[self settingsForIconType:iconType][@"rotation"][@(iconState)] doubleValue];
 }
 
+#pragma mark Lines Settings
+
+- (NSArray *)linesSettingsForIconType:(TPLAnimatableIconType)iconType
+{
+	id lines = [self settingsForIconType:iconType][@"lines"];
+	if ([lines isKindOfClass:[NSArray class]]) {
+		return lines;
+	} else {
+		NSDictionary *linesDict = lines;
+		TPLAnimatableIconType copyFromIconType = [linesDict[@"copyLinesFromIconType"] integerValue];
+		return [self linesSettingsForIconType:copyFromIconType];
+	}
+}
+
+- (NSDictionary *)settingsForLineAtIndex:(NSUInteger)lineIndex
+							withIconType:(TPLAnimatableIconType)iconType
+{
+	return [self linesSettingsForIconType:iconType][lineIndex];
+}
+
+- (TPLAnimatableIconLinePosition)lineFromPositionForLineAtIndex:(NSUInteger)lineIndex
+												   withIconType:(TPLAnimatableIconType)iconType
+													   forState:(TPLAnimatableIconState)state
+{
+	NSDictionary *lineDict = [self settingsForLineAtIndex:lineIndex withIconType:iconType];
+	return [lineDict[@"from"][@(state)] integerValue];
+}
+
+- (TPLAnimatableIconLinePosition)lineToPositionForLineAtIndex:(NSUInteger)lineIndex
+												 withIconType:(TPLAnimatableIconType)iconType
+													 forState:(TPLAnimatableIconState)state
+{
+	NSDictionary *lineDict = [self settingsForLineAtIndex:lineIndex withIconType:iconType];
+	return [lineDict[@"to"][@(state)] integerValue];
+}
+
+- (CGFloat)opacityForLineAtIndex:(NSUInteger)lineIndex
+					withIconType:(TPLAnimatableIconType)iconType
+						forState:(TPLAnimatableIconState)state
+{
+	NSDictionary *lineDict = [self settingsForLineAtIndex:lineIndex withIconType:iconType];
+	return [lineDict[@"opacity"][@(state)] doubleValue];
+}
+
+
 #pragma mark - Animations
 
 - (void)animateToState:(TPLAnimatableIconState)state
@@ -197,28 +338,31 @@
 	if (!_didLayout) { return; }
 	if (updateIconType) {
 		
-		#warning maybe we dont need to remove old strokes if new count == oldCount
-		// remove all old layers
-		for (CAShapeLayer *shapeLayer in self.strokes) {
-			[shapeLayer removeFromSuperlayer];
-		}
-		
-		// create new layers for current iconType
-		NSMutableArray *mutableStrokes = [NSMutableArray array];
-		for (int i = 0; i < [self numberOfStrokesForIconType:self.iconType]; i++) {
-			[mutableStrokes addObject:[[CAShapeLayer alloc] init]];
-		}
-		self.strokes = [NSArray arrayWithArray:mutableStrokes];
-		mutableStrokes = nil;
-		
-		// add new layers to views' layer
-		for (CAShapeLayer *shapeLayer in self.strokes) {
-			[self.layer addSublayer:shapeLayer];
+		if (self.lines.count != [self numberOfLinesForIconType:self.iconType]) {
+			
+			// remove all old layers
+			for (CAShapeLayer *shapeLayer in self.lines) {
+				[shapeLayer removeFromSuperlayer];
+			}
+			
+			// create new layers for current iconType
+			NSMutableArray *mutableLines = [NSMutableArray array];
+			for (int i = 0; i < [self numberOfLinesForIconType:self.iconType]; i++) {
+				[mutableLines addObject:[[CAShapeLayer alloc] init]];
+			}
+			self.lines = [NSArray arrayWithArray:mutableLines];
+			mutableLines = nil;
+			
+			// add new layers to views' layer
+			for (CAShapeLayer *shapeLayer in self.lines) {
+				[self.layer addSublayer:shapeLayer];
+			}
+
 		}
 	}
 	
 	// update non animatable properties
-	for (CAShapeLayer *shapeLayer in self.strokes) {
+	for (CAShapeLayer *shapeLayer in self.lines) {
 		shapeLayer.lineWidth = self.lineWidth;
 		
 		shapeLayer.strokeColor = self.tintColor.CGColor;
@@ -227,128 +371,81 @@
 		shapeLayer.lineCap = kCALineCapRound;
 	}
 	
-	// update animatable properties
-	void(^lineAnimationsBlock)(CAShapeLayer *, NSInteger, CGRect) = ^(CAShapeLayer *shapeLayer,
-																  NSInteger idx,
-																  CGRect b)
-	{
-		
-		CGPoint lineFromPoint, lineToPoint;
+	CGPoint(^pointFromLinePosition)(TPLAnimatableIconLinePosition, CGRect) = ^(TPLAnimatableIconLinePosition position, CGRect b) {
 		
 		CGPoint pointTopLeft = CGPointMake(b.origin.x, b.origin.y);
 		CGPoint pointTopCenter = CGPointMake(b.origin.x + b.size.width /  2, b.origin.y);
 		CGPoint pointTopRight = CGPointMake(b.origin.x + b.size.width, b.origin.y);
 		
 		CGPoint pointMiddleLeft = CGPointMake(b.origin.x, b.origin.y + b.size.height / 2);
+		CGPoint pointMiddleCenter = CGPointMake(b.origin.x + b.size.width / 2, b.origin.y + b.size.height / 2);
 		CGPoint pointMiddleRight = CGPointMake(b.origin.x + b.size.width, b.origin.y + b.size.height / 2);
 		
 		CGPoint pointBottomLeft = CGPointMake(b.origin.x, b.origin.y + b.size.height);
 		CGPoint pointBottomCenter = CGPointMake(b.origin.x + b.size.width / 2, b.origin.y + b.size.height);
 		CGPoint pointBottomRight = CGPointMake(b.origin.x + b.size.width, b.origin.y + b.size.height);
 		
-		CGFloat opacity = 0;
-		
-#warning handle with stroke dict
-		
-		switch (self.iconType) {
-			case TPLAnimatableIconTypeHamburgerToCross:
+		switch (position) {
+			case TPLAnimatableIconLinePositionTopLeft:
 			{
-				switch (idx) {
-					case 0:
-					{
-						lineFromPoint = self.iconState == TPLAnimatableIconState1 ? pointTopLeft : pointBottomLeft;
-						lineToPoint = pointTopRight;
-						
-						opacity = 1;
-						break;
-					}
-					case 1:
-					{
-						lineFromPoint = pointMiddleLeft;
-						lineToPoint = pointMiddleRight;
-						
-						opacity = self.iconState == TPLAnimatableIconState1 ? 1 : 0;
-						break;
-					}
-					case 2:
-					{
-						lineFromPoint = self.iconState == TPLAnimatableIconState1 ? pointBottomLeft : pointTopLeft;
-						lineToPoint = pointBottomRight;
-						
-						opacity = 1;
-						break;
-					}
-				}
-				
-				break;
+				return pointTopLeft;
 			}
-			case TPLAnimatableIconTypeHamburgerToArrowLeft:
+			case TPLAnimatableIconLinePositionTopCenter:
 			{
-				switch (idx) {
-					case 0:
-					{
-						lineFromPoint = self.iconState == TPLAnimatableIconState1 ? pointTopLeft : pointMiddleLeft;
-						lineToPoint = self.iconState == TPLAnimatableIconState1 ? pointTopRight : pointTopCenter;
-						
-						opacity = 1;
-						break;
-					}
-					case 1:
-					{
-						lineFromPoint = pointMiddleLeft;
-						lineToPoint = pointMiddleRight;
-						
-						opacity = 1;
-						break;
-					}
-					case 2:
-					{
-						lineFromPoint = self.iconState == TPLAnimatableIconState1 ? pointBottomLeft : pointMiddleLeft;
-						lineToPoint = self.iconState == TPLAnimatableIconState1 ? pointBottomRight : pointBottomCenter;
-						
-						opacity = 1;
-						break;
-					}
-				}
-				break;
+				return pointTopCenter;
 			}
-			case TPLAnimatableIconTypeHamburgerToArrowTopRotation:
+			case TPLAnimatableIconLinePositionTopRight:
 			{
-				switch (idx) {
-					case 0:
-					{
-						lineFromPoint = self.iconState == TPLAnimatableIconState1 ? pointTopLeft : pointMiddleLeft;
-						lineToPoint = self.iconState == TPLAnimatableIconState1 ? pointTopRight : pointTopCenter;
-						
-						opacity = 1;
-						break;
-					}
-					case 1:
-					{
-						lineFromPoint = pointMiddleLeft;
-						lineToPoint = pointMiddleRight;
-						
-						opacity = 1;
-						break;
-					}
-					case 2:
-					{
-						lineFromPoint = self.iconState == TPLAnimatableIconState1 ? pointBottomLeft : pointMiddleLeft;
-						lineToPoint = self.iconState == TPLAnimatableIconState1 ? pointBottomRight : pointBottomCenter;
-						
-						opacity = 1;
-						break;
-					}
-				}
-				break;
+				return pointTopRight;
 			}
-			default:
+			case TPLAnimatableIconLinePositionMiddleLeft:
 			{
-				
-				break;
+				return pointMiddleLeft;
+			}
+			case TPLAnimatableIconLinePositionMiddleCenter:
+			{
+				return pointMiddleCenter;
+			}
+			case TPLAnimatableIconLinePositionMiddleRight:
+			{
+				return pointMiddleRight;
+			}
+			case TPLAnimatableIconLinePositionBottomLeft:
+			{
+				return pointBottomLeft;
+			}
+			case TPLAnimatableIconLinePositionBottomCenter:
+			{
+				return pointBottomCenter;
+			}
+			case TPLAnimatableIconLinePositionBottomRight:
+			{
+				return pointBottomRight;
 			}
 		}
+	};
+	
+	// update animatable properties
+	void(^lineAnimationsBlock)(CAShapeLayer *, NSInteger, CGRect) = ^(CAShapeLayer *shapeLayer, NSInteger idx, CGRect innerBounds)
+	{
 		
+		CGPoint lineFromPoint, lineToPoint;
+		
+		// Line Position (from, to)
+		TPLAnimatableIconLinePosition fromPosition = [self lineFromPositionForLineAtIndex:idx
+																			 withIconType:self.iconType
+																				 forState:self.iconState];
+		TPLAnimatableIconLinePosition toPosition = [self lineToPositionForLineAtIndex:idx
+																		 withIconType:self.iconType
+																			 forState:self.iconState];
+		
+		lineFromPoint = pointFromLinePosition(fromPosition, innerBounds);
+		lineToPoint = pointFromLinePosition(toPosition, innerBounds);
+		
+		// Line Opacity
+		CGFloat opacity = [self opacityForLineAtIndex:idx
+										 withIconType:self.iconType
+											 forState:self.iconState];
 		
 		UIBezierPath *shapeLayerPath = [UIBezierPath bezierPath];
 		[shapeLayerPath moveToPoint:lineFromPoint];
@@ -406,7 +503,7 @@
 		CAMediaTimingFunction *timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
 		CFTimeInterval duration = 0.3;
 		
-		[self.strokes enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+		[self.lines enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
 			
 			CAShapeLayer *shapeLayer = obj;
 			
@@ -467,7 +564,7 @@
 		
 	} else {
 		
-		[self.strokes enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+		[self.lines enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
 			lineAnimationsBlock(obj, idx, innerBounds);
 		}];
 		
@@ -476,3 +573,21 @@
 }
 
 @end
+
+NSString *NSStringFromTPLAnimatableIconType(TPLAnimatableIconType iconType)
+{
+	switch (iconType) {
+		case TPLAnimatableIconTypeHamburgerToCross:
+		{
+			return @"HamburgerToCross";
+		}
+		case TPLAnimatableIconTypeHamburgerToArrowLeft:
+		{
+			return @"HamburgerToArrowLeft";
+		}
+		case TPLAnimatableIconTypeHamburgerToArrowTopRotation:
+		{
+			return @"HamburgerToArrowTopRotation";
+		}
+	}
+}

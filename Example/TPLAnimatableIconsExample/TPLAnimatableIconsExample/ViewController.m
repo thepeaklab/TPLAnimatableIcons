@@ -9,12 +9,14 @@
 #import "ViewController.h"
 #import <TPLAnimatableIcons/TPLAnimateableIcons.h>
 
-@interface ViewController ()
+@interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet TPLAnimatableIconView *animatableView1;
+@property (strong, nonatomic) NSArray *iconTypes;
 
 @property (weak, nonatomic) IBOutlet UISwitch *switchState;
 @property (weak, nonatomic) IBOutlet UIStepper *stepperStrokeWidth;
+@property (weak, nonatomic) IBOutlet UITableView *tableViewTypes;
 
 @end
 
@@ -24,35 +26,52 @@
 {
 	[super viewDidLoad];
 	
-	self.animatableView1.iconType = TPLAnimatableIconTypeHamburgerToCross;
-	self.animatableView1.lineWidth = self.stepperStrokeWidth.value;
-	
+	self.iconTypes = @[
+					   @(TPLAnimatableIconTypeHamburgerToCross),
+					   @(TPLAnimatableIconTypeHamburgerToArrowLeft),
+					   @(TPLAnimatableIconTypeHamburgerToArrowTopRotation)
+					   ];
 }
 
-- (IBAction)actionIconTypeChanged:(UISegmentedControl *)sender
+- (void)viewDidAppear:(BOOL)animated
 {
-	switch (sender.selectedSegmentIndex) {
-		case 0:
-		{
-			self.animatableView1.iconType = TPLAnimatableIconTypeHamburgerToCross;
-			break;
-		}
-		case 1:
-		{
-			self.animatableView1.iconType = TPLAnimatableIconTypeHamburgerToArrowLeft;
-			break;
-		}
-		case 2:
-		{
-			self.animatableView1.iconType = TPLAnimatableIconTypeHamburgerToArrowTopRotation;
-			break;
-		}
-	}
+	[super viewDidAppear:animated];
+	
+	[self.tableViewTypes selectRowAtIndexPath:[NSIndexPath indexPathForRow:0
+																 inSection:0]
+									 animated:NO
+							   scrollPosition:UITableViewScrollPositionTop];
+}
+
+#pragma mark - UITableViewDatasource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+	return [self.iconTypes count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"
+															forIndexPath:indexPath];
+	
+	TPLAnimatableIconType iconType = [self.iconTypes[indexPath.row] integerValue];
+	cell.textLabel.text = NSStringFromTPLAnimatableIconType(iconType);
+	
+	return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	TPLAnimatableIconType type = (TPLAnimatableIconType)indexPath.row;
+	[self.animatableView1 animateToIconType:type];
 }
 
 - (IBAction)actionStateSwitch:(UISwitch *)sender
 {
-	[self.animatableView1 animateToState:sender.on ? TPLAnimatableIconState1 : TPLAnimatableIconState2];
+	[self.animatableView1 animateToState:sender.on ? TPLAnimatableIconState2 : TPLAnimatableIconState1];
 }
 
 - (IBAction)actionStepChanged:(UIStepper *)sender

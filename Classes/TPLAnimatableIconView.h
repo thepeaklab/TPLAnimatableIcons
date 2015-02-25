@@ -16,5 +16,8 @@
 @property (nonatomic) CGFloat lineWidth;
 
 - (void)animateToState:(TPLAnimatableIconState)state;
+- (void)animateToIconType:(TPLAnimatableIconType)iconType;
 
 @end
+
+NSString *NSStringFromTPLAnimatableIconType(TPLAnimatableIconType iconType);
