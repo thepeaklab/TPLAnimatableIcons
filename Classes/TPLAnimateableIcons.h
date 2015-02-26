@@ -12,7 +12,11 @@
 typedef NS_ENUM(NSUInteger, TPLAnimatableIconType) {
 	TPLAnimatableIconTypeHamburgerToCross,
 	TPLAnimatableIconTypeHamburgerToArrowLeft,
-	TPLAnimatableIconTypeHamburgerToArrowTopRotation
+	TPLAnimatableIconTypeHamburgerToArrowRight,
+	TPLAnimatableIconTypeHamburgerToArrowTop,
+	TPLAnimatableIconTypeHamburgerToArrowBottom,
+	TPLAnimatableIconTypeHamburgerToArrowTopRotation,
+	TPLAnimatableIconTypeHamburgerToArrowBottomRotation
 };
 
 typedef NS_ENUM(NSUInteger, TPLAnimatableIconState) {

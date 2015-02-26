@@ -29,7 +29,11 @@
 	self.iconTypes = @[
 					   @(TPLAnimatableIconTypeHamburgerToCross),
 					   @(TPLAnimatableIconTypeHamburgerToArrowLeft),
-					   @(TPLAnimatableIconTypeHamburgerToArrowTopRotation)
+					   @(TPLAnimatableIconTypeHamburgerToArrowRight),
+					   @(TPLAnimatableIconTypeHamburgerToArrowTop),
+					   @(TPLAnimatableIconTypeHamburgerToArrowBottom),
+					   @(TPLAnimatableIconTypeHamburgerToArrowTopRotation),
+					   @(TPLAnimatableIconTypeHamburgerToArrowBottomRotation)
 					   ];
 }
 

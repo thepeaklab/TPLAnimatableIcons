@@ -175,11 +175,188 @@
 											   }
 									  ]
 							  },
+							  @(TPLAnimatableIconTypeHamburgerToArrowRight): @{
+									  @"numberOfLines": @(3),
+									  @"aspectRatio": @{
+											  @(TPLAnimatableIconState1): @(0.6),
+											  @(TPLAnimatableIconState2): @(0.8)
+									  },
+									  @"scale": @{
+											  @(TPLAnimatableIconState1): @(1),
+											  @(TPLAnimatableIconState2): @(1)
+									  },
+									  @"rotation": @{
+											  @(TPLAnimatableIconState1): @(0),
+											  @(TPLAnimatableIconState2): @(0)
+									  },
+									  @"lines": @[
+											  @{
+												  @"from": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionTopLeft),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionTopCenter)
+												  },
+												  @"to": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionTopRight),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionMiddleRight)
+												  },
+												  @"opacity": @{
+														  @(TPLAnimatableIconState1): @(1),
+														  @(TPLAnimatableIconState2): @(1)
+												  }
+											   },
+											  @{
+												  @"from": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionMiddleLeft),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionMiddleLeft)
+												  },
+												  @"to": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionMiddleRight),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionMiddleRight)
+												  },
+												  @"opacity": @{
+														  @(TPLAnimatableIconState1): @(1),
+														  @(TPLAnimatableIconState2): @(1)
+												  }
+											   },
+											  @{
+												  @"from": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionBottomLeft),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionBottomCenter)
+												  },
+												  @"to": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionBottomRight),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionMiddleRight)
+												  },
+												  @"opacity": @{
+														  @(TPLAnimatableIconState1): @(1),
+														  @(TPLAnimatableIconState2): @(1)
+												  }
+											   }
+									]
+							  },
+							  @(TPLAnimatableIconTypeHamburgerToArrowTop): @{
+									  @"numberOfLines": @(3),
+									  @"aspectRatio": @{
+											  @(TPLAnimatableIconState1): @(0.6),
+											  @(TPLAnimatableIconState2): @(1.2)
+									  },
+									  @"scale": @{
+											  @(TPLAnimatableIconState1): @(1),
+											  @(TPLAnimatableIconState2): @(0.8)
+									  },
+									  @"rotation": @{
+											  @(TPLAnimatableIconState1): @(0),
+											  @(TPLAnimatableIconState2): @(0)
+									  },
+									  @"lines": @[
+											  @{
+												  @"from": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionTopLeft),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionTopCenter)
+												  },
+												  @"to": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionTopRight),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionMiddleRight)
+												  },
+												  @"opacity": @{
+														  @(TPLAnimatableIconState1): @(1),
+														  @(TPLAnimatableIconState2): @(1)
+												  }
+											   },
+											  @{
+												  @"from": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionMiddleLeft),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionTopCenter)
+												  },
+												  @"to": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionMiddleRight),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionBottomCenter)
+												  },
+												  @"opacity": @{
+														  @(TPLAnimatableIconState1): @(1),
+														  @(TPLAnimatableIconState2): @(1)
+												  }
+											   },
+											  @{
+												  @"from": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionBottomLeft),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionTopCenter)
+												  },
+												  @"to": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionBottomRight),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionMiddleLeft)
+												  },
+												  @"opacity": @{
+														  @(TPLAnimatableIconState1): @(1),
+														  @(TPLAnimatableIconState2): @(1)
+												  }
+											   }
+									  ]
+							  },
+							  @(TPLAnimatableIconTypeHamburgerToArrowBottom): @{
+									  @"numberOfLines": @(3),
+									  @"aspectRatio": @{
+											  @(TPLAnimatableIconState1): @(0.6),
+											  @(TPLAnimatableIconState2): @(1.2)
+									  },
+									  @"scale": @{
+											  @(TPLAnimatableIconState1): @(1),
+											  @(TPLAnimatableIconState2): @(0.8)
+									  },
+									  @"rotation": @{
+											  @(TPLAnimatableIconState1): @(0),
+											  @(TPLAnimatableIconState2): @(0)
+									  },
+									  @"lines": @[
+											  @{
+												  @"from": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionTopLeft),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionBottomCenter)
+												  },
+												  @"to": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionTopRight),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionMiddleLeft)
+												  },
+												  @"opacity": @{
+														  @(TPLAnimatableIconState1): @(1),
+														  @(TPLAnimatableIconState2): @(1)
+												  }
+											   },
+											  @{
+												  @"from": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionMiddleLeft),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionBottomCenter)
+												  },
+												  @"to": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionMiddleRight),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionTopCenter)
+												  },
+												  @"opacity": @{
+														  @(TPLAnimatableIconState1): @(1),
+														  @(TPLAnimatableIconState2): @(1)
+												  }
+											   },
+											  @{
+												  @"from": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionBottomLeft),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionBottomCenter)
+												  },
+												  @"to": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionBottomRight),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionMiddleRight)
+												  },
+												  @"opacity": @{
+														  @(TPLAnimatableIconState1): @(1),
+														  @(TPLAnimatableIconState2): @(1)
+												  }
+											   }
+									  ]
+							  },
 							  @(TPLAnimatableIconTypeHamburgerToArrowTopRotation): @{
 									  @"numberOfLines": @(3),
 									  @"aspectRatio": @{
 											  @(TPLAnimatableIconState1): @(0.6),
-											  @(TPLAnimatableIconState2): @(1)
+											  @(TPLAnimatableIconState2): @(0.8)
 									  },
 									  @"scale": @{
 											  @(TPLAnimatableIconState1): @(1),
@@ -188,6 +365,24 @@
 									  @"rotation": @{
 											  @(TPLAnimatableIconState1): @(0),
 											  @(TPLAnimatableIconState2): @(90)
+									  },
+									  @"lines": @{
+											  @"copyLinesFromIconType": @(TPLAnimatableIconTypeHamburgerToArrowLeft)
+									  }
+							  },
+							  @(TPLAnimatableIconTypeHamburgerToArrowBottomRotation): @{
+									  @"numberOfLines": @(3),
+									  @"aspectRatio": @{
+											  @(TPLAnimatableIconState1): @(0.6),
+											  @(TPLAnimatableIconState2): @(0.8)
+									  },
+									  @"scale": @{
+											  @(TPLAnimatableIconState1): @(1),
+											  @(TPLAnimatableIconState2): @(1)
+									  },
+									  @"rotation": @{
+											  @(TPLAnimatableIconState1): @(0),
+											  @(TPLAnimatableIconState2): @(-90)
 									  },
 									  @"lines": @{
 											  @"copyLinesFromIconType": @(TPLAnimatableIconTypeHamburgerToArrowLeft)
@@ -501,7 +696,7 @@
 	if (animated) {
 		
 		CAMediaTimingFunction *timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-		CFTimeInterval duration = 0.3;
+		CFTimeInterval duration = 0.25;
 		
 		[self.lines enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
 			
@@ -585,9 +780,25 @@ NSString *NSStringFromTPLAnimatableIconType(TPLAnimatableIconType iconType)
 		{
 			return @"HamburgerToArrowLeft";
 		}
+		case TPLAnimatableIconTypeHamburgerToArrowRight:
+		{
+			return @"HamburgerToArrowRight";
+		}
+		case TPLAnimatableIconTypeHamburgerToArrowTop:
+		{
+			return @"HamburgerToArrowTop";
+		}
+		case TPLAnimatableIconTypeHamburgerToArrowBottom:
+		{
+			return @"HamburgerToArrowBottom";
+		}
 		case TPLAnimatableIconTypeHamburgerToArrowTopRotation:
 		{
 			return @"HamburgerToArrowTopRotation";
+		}
+		case TPLAnimatableIconTypeHamburgerToArrowBottomRotation:
+		{
+			return @"HamburgerToArrowBottomRotation";
 		}
 	}
 }
