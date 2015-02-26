@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "TPLAnimatableIcons"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "Animated Icons using CAShapeLayer."
 
   s.description  = <<-DESC
@@ -74,7 +74,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "ssh://git@stash.thepeaklab.biz:7999/~christoph/tplanimatableicons.git", :tag => "1.0.0"}
+  s.source       = { :git => "ssh://git@stash.thepeaklab.biz:7999/~christoph/tplanimatableicons.git", :tag => "1.0.1"}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

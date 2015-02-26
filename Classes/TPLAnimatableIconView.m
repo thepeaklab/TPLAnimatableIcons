@@ -65,7 +65,7 @@
 									  },
 									  @"scale": @{
 											  @(TPLAnimatableIconState1): @(1),
-											  @(TPLAnimatableIconState2): @(0.8)
+											  @(TPLAnimatableIconState2): @(0.6)
 									  },
 									  @"rotation": @{
 											  @(TPLAnimatableIconState1): @(0),
