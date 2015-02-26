@@ -16,16 +16,13 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "TPLAnimatableIcons"
-  s.version      = "0.0.1"
-  s.summary      = "A short description of TPLAnimatableIcons."
+  s.version      = "1.0.0"
+  s.summary      = "Animated Icons using CAShapeLayer."
 
   s.description  = <<-DESC
-                   A longer description of TPLAnimatableIcons in Markdown format.
+                   A set of icon Types animated with CoreAnimation.
 
-                   * Think: Why did you write this? What is the focus? What does it do?
-                   * CocoaPods will be using this to generate tags, and improve search results.
-                   * Try to keep it short, snappy and to the point.
-                   * Finally, don't worry about the indent, CocoaPods strips it!
+                   * iOS Version of Menu Icons from Transformicons (http://www.transformicons.com)
                    DESC
 
   s.homepage     = "http://www.thepeaklab.com"
@@ -77,7 +74,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "ssh://git@stash.thepeaklab.biz:7999/~christoph/tplanimatableicons.git" }#, :tag => "0.0.1"}
+  s.source       = { :git => "ssh://git@stash.thepeaklab.biz:7999/~christoph/tplanimatableicons.git", :tag => "1.0.0"}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
