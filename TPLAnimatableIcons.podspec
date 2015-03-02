@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "TPLAnimatableIcons"
   s.version      = "1.0.1"
-  s.summary      = "Animated Icons using CAShapeLayer."
+  s.summary      = "TPLAnimatableIcons is a clean way to animate between multiple vector Icons based on CoreAnimation."
 
   s.description  = <<-DESC
                    A set of icon Types animated with CoreAnimation.
@@ -50,9 +50,7 @@ Pod::Spec.new do |s|
   #
 
   s.author             = { "Christoph Pageler" => "cp@thepeaklab.com" }
-  # Or just: s.author    = "Christoph Pageler"
-  # s.authors            = { "Christoph Pageler" => "cp@thepeaklab.com" }
-  # s.social_media_url   = "http://twitter.com/Christoph Pageler"
+  s.social_media_url   = "http://twitter.com/thepeaklab"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -74,7 +72,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "ssh://git@stash.thepeaklab.biz:7999/~christoph/tplanimatableicons.git", :tag => "1.0.1"}
+  s.source       = { :git => "https://github.com/thepeaklab/TPLAnimatableIcons.git", :tag => "1.0.1"}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
