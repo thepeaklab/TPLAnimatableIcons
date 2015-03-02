@@ -441,7 +441,7 @@
 	NSUInteger newNumberOfStrokes = [self numberOfLinesForIconType:iconType];
 	BOOL canAnimate = self.lines.count == newNumberOfStrokes;
 	_iconType = iconType;
-#warning reset state after icon type change ?!
+	// TODO reset state after icon type change ?!
 	[self animateToState:self.iconState
 				animated:canAnimate
 		  updateIconType:self.iconType];

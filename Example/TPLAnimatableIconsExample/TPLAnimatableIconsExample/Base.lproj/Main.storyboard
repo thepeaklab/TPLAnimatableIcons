@@ -76,7 +76,7 @@
                     </view>
                     <connections>
                         <outlet property="animatableView1" destination="bdo-1S-lrI" id="TYC-iN-F3e"/>
-                        <outlet property="stepperStrokeWidth" destination="apN-gH-lD0" id="xbF-MI-qAp"/>
+                        <outlet property="stepperLineWidth" destination="apN-gH-lD0" id="Ph1-9u-QJP"/>
                         <outlet property="switchState" destination="Hfh-KA-ihv" id="4JX-jy-Ys9"/>
                         <outlet property="tableViewTypes" destination="TWH-H5-2zi" id="mx4-TT-Oti"/>
                     </connections>

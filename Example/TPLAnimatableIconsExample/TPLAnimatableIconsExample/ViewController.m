@@ -15,7 +15,7 @@
 @property (strong, nonatomic) NSArray *iconTypes;
 
 @property (weak, nonatomic) IBOutlet UISwitch *switchState;
-@property (weak, nonatomic) IBOutlet UIStepper *stepperStrokeWidth;
+@property (weak, nonatomic) IBOutlet UIStepper *stepperLineWidth;
 @property (weak, nonatomic) IBOutlet UITableView *tableViewTypes;
 
 @end
@@ -80,7 +80,7 @@
 
 - (IBAction)actionStepChanged:(UIStepper *)sender
 {
-	self.animatableView1.lineWidth = self.stepperStrokeWidth.value;
+	self.animatableView1.lineWidth = self.stepperLineWidth.value;
 }
 
 - (void)didReceiveMemoryWarning
