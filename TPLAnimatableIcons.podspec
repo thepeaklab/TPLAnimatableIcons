@@ -23,10 +23,19 @@ Pod::Spec.new do |s|
                    A set of icon Types animated with CoreAnimation.
 
                    * iOS Version of Menu Icons from Transformicons (http://www.transformicons.com)
+
+                   Icon Types:
+                   * Hamburger - Cross
+                   * Hamburger - Arrow Left
+                   * Hamburger - Arrow Right
+                   * Hamburger - Arrow Top
+                   * Hamburger - Arrow Bottom
+                   * Hamburger - Arrow Top (Left with rotation to top)
+                   * Hamburger - Arrow Bottom (Left with rotation to bottom)
                    DESC
 
-  s.homepage     = "http://www.thepeaklab.com"
-  # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
+  s.homepage     = "https://github.com/thepeaklab/TPLAnimatableIcons"
+  s.screenshots  = "https://github.com/thepeaklab/TPLAnimatableIcons/raw/master/TPLAnimatableIcons.gif"
 
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
