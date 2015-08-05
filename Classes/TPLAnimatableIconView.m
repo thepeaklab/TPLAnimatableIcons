@@ -387,6 +387,65 @@
 									  @"lines": @{
 											  @"copyLinesFromIconType": @(TPLAnimatableIconTypeHamburgerToArrowLeft)
 									  }
+							  },
+							  @(TPLAnimatableIconTypeHamburgerToTwoLinedArrowLeft): @{
+									  @"numberOfLines": @(3),
+									  @"aspectRatio": @{
+											  @(TPLAnimatableIconState1): @(0.6),
+											  @(TPLAnimatableIconState2): @(1)
+									  },
+									  @"scale": @{
+											  @(TPLAnimatableIconState1): @(1),
+											  @(TPLAnimatableIconState2): @(0.75)
+									  },
+									  @"rotation": @{
+											  @(TPLAnimatableIconState1): @(0),
+											  @(TPLAnimatableIconState2): @(0)
+									  },
+									  @"lines": @[
+											  @{
+												  @"from": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionTopLeft),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionMiddleLeft)
+														  },
+												  @"to": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionTopRight),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionTopCenter)
+														  },
+												  @"opacity": @{
+														  @(TPLAnimatableIconState1): @(1),
+														  @(TPLAnimatableIconState2): @(1)
+														  }
+											   },
+											  @{
+												  @"from": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionMiddleLeft),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionMiddleLeft)
+														  },
+												  @"to": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionMiddleRight),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionMiddleRight)
+														  },
+												  @"opacity": @{
+														  @(TPLAnimatableIconState1): @(1),
+														  @(TPLAnimatableIconState2): @(0)
+														  }
+											   },
+											  @{
+												  @"from": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionBottomLeft),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionMiddleLeft)
+														  },
+												  @"to": @{
+														  @(TPLAnimatableIconState1): @(TPLAnimatableIconLinePositionBottomRight),
+														  @(TPLAnimatableIconState2): @(TPLAnimatableIconLinePositionBottomCenter)
+														  },
+												  @"opacity": @{
+														  @(TPLAnimatableIconState1): @(1),
+														  @(TPLAnimatableIconState2): @(1)
+														  }
+											   }
+									  ]
 							  }
 	};
 }
@@ -799,6 +858,10 @@ NSString *NSStringFromTPLAnimatableIconType(TPLAnimatableIconType iconType)
 		case TPLAnimatableIconTypeHamburgerToArrowBottomRotation:
 		{
 			return @"HamburgerToArrowBottomRotation";
+		}
+		case TPLAnimatableIconTypeHamburgerToTwoLinedArrowLeft:
+		{
+			return @"TPLAnimatableIconTypeHamburgerToTwoLinedArrowLeft";
 		}
 	}
 }

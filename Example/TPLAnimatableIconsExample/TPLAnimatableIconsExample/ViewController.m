@@ -33,7 +33,8 @@
 					   @(TPLAnimatableIconTypeHamburgerToArrowTop),
 					   @(TPLAnimatableIconTypeHamburgerToArrowBottom),
 					   @(TPLAnimatableIconTypeHamburgerToArrowTopRotation),
-					   @(TPLAnimatableIconTypeHamburgerToArrowBottomRotation)
+					   @(TPLAnimatableIconTypeHamburgerToArrowBottomRotation),
+					   @(TPLAnimatableIconTypeHamburgerToTwoLinedArrowLeft)
 					   ];
 }
 

@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "TPLAnimatableIcons"
-  s.version      = "1.0.2"
+  s.version      = "1.1.0"
   s.summary      = "TPLAnimatableIcons is a clean way to animate between multiple vector Icons based on CoreAnimation."
 
   s.description  = <<-DESC
