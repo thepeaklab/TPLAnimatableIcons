@@ -7,7 +7,7 @@
 
 ## Installation
 
-### From Cocoapods
+### From CocoaPods
 
 ```ruby
 pod 'TPLAnimatableIcons'
